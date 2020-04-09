@@ -1,11 +1,11 @@
 public class InsertionSort {
     public void insertionSort(int[] array) {
 
-        for(int i = 0; i < array.length - 1; i++) {
+        for(int i = 1; i < array.length ; i++) {
 
             int currIndex = i;
-            while(currIndex >= 0 && array[currIndex] > array[currIndex+1]) {
-                replace (currIndex, currIndex+1, array);
+            while(currIndex > 0 && array[currIndex-1] > array[currIndex]) {
+                replace (currIndex-1, currIndex, array);
                 currIndex--;
             }
         }
