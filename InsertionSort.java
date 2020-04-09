@@ -4,8 +4,8 @@ public class InsertionSort {
         for(int i = 0; i < array.length - 1; i++) {
 
             int currIndex = i;
-            while(array[currIndex] > array[i+1] && currIndex > 0) {
-                replace (currIndex, i, array);
+            while(currIndex >= 0 && array[currIndex] > array[currIndex+1]) {
+                replace (currIndex, currIndex+1, array);
                 currIndex--;
             }
         }
@@ -21,10 +21,11 @@ public class InsertionSort {
         int[] array= {10, 19, 26, 1, 4, 0, 9, 11, 5, 28, 19};
         InsertionSort ssObject = new InsertionSort();
         for(int i = 0; i <array.length ; i ++) {
-            System.out.print( array[i]);
+            System.out.print( array[i] +"   ");
         }
+        System.out.println();
         ssObject.insertionSort(array);
         for(int i = 0; i <array.length ; i ++)
-            System.out.print("New Array   :" + array[i]);
+            System.out.print(array[i] + "   ");
     }
 }
